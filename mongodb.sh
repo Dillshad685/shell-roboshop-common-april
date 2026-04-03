@@ -9,7 +9,7 @@ VALIDATE $? "copied to repo"
 dnf install mongodb-org -y &>>$LOG_FILE
 VALIDATE $? "installed mongodb"
 
-sytemctl enable mongod &>>$LOG_FILE
+syStemctl enable mongod &>>$LOG_FILE
 VALIDATE $? "ENABLED MONGO"
 
 systemctl start mongod &>>$LOG_FILE
