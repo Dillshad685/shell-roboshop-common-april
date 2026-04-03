@@ -10,7 +10,7 @@ dnf install mongodb-org -y &>>$LOG_FILE
 VALIDATE $? "installed mongodb"
 
 sytemctl enable mongod &>>$LOG_FILE
-VALIDTE $? "ENABLED MONGO"
+VALIDATE $? "ENABLED MONGO"
 
 systemctl start mongod &>>$LOG_FILE
 VALIDATE $? "start mongod"

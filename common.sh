@@ -26,9 +26,9 @@ check_root(){
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo -e "$R ... error  $N" | tee -a $LOG_FILE
+        echo -e "$R $2... error  $N" | tee -a $LOG_FILE
     else
-        echo -e "$G ... success $N" | tee -a $LOG_FILE
+        echo -e "$G $2... success $N" | tee -a $LOG_FILE
     fi
 }
 
