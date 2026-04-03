@@ -9,7 +9,7 @@ app_setup
 system_setup
 cp $SCRIPT_DIR/mongodb.repo  /etc/yum.repos.d/mongo.repo
 VALIDATE $? "installed mongorepo"
-dnf module install mongodb-mongosh -y &>>$LOG_FILE
+dnf install mongodb-mongosh -y &>>$LOG_FILE
 VALIDATE $? "installed mongod"
 
 INDEX=$(mongosh mongodb.dillshad.space --quiet --eval "db.getMongo().getDBNames().indexOf('catalogue')")
