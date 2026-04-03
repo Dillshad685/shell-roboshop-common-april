@@ -10,7 +10,7 @@ systemctl enable mysqld &>>$LOG_FILE
 VALIDATE $? "ENABLED mysql"
 systemctl start mysqld &>>$LOG_FILE
 VALIDATE $? "started mysql"
-mysql_server_installation --set--root-pass RoboShop@1 &>>$LOG_FILE
+mysql_secure_installtion --set--root-pass RoboShop@1 &>>$LOG_FILE
 VALIDATE $? "mysql set root"
 systemctl restart mysqld 
 VALIDATE $? "restarted mysql"
