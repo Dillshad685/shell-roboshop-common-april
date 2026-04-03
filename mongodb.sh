@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./comon.sh
+source ./common.sh
 
 check_root
 
