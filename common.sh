@@ -9,7 +9,7 @@ N="\e[0m"
 LOGS_FOLDER="/var/log/shell-roboshop-common-april"
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-START_TIME=$(date+ %s)
+START_TIME=$(date +%s)
 SCRIPT_DIR=$PWD
 MONGODB_HOST=mongodb.dillshad.space
 MYSQL_HOST=mysql.dillshad.space
@@ -100,7 +100,7 @@ app_restart(){
 }
 
 print_total_time(){
-    END_TIME=$(date+ %s)
+    END_TIME=$(date +%s)
     TOTAL_TIME=$(( $END_TIME - $START_TIME ))
     echo -e "$Y scrit executed in $TOTAL_TIME seconds $N"
 }
