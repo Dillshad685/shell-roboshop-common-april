@@ -37,7 +37,7 @@ nodejs_steup(){
     VALIDATE $? "disabling nodejs"
     dnf module enable nodejs:20 -y &>>$LOG_FILE
     VALIDATE $? "Enalbling nodejs"
-    dnf module install nodejs -y &>>$LOG_FILE
+    dnf install nodejs -y &>>$LOG_FILE
     VALIDATE $? "Installing nodejs"
 
     npm install &>>$LOG_FILE
