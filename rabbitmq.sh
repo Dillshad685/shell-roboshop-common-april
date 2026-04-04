@@ -7,11 +7,11 @@ check_root
 cp $SCRIPT_DIR/rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo &>>$LOG_FILE
 VALIDATE $? "Adding RabbitMQ repo"
 
-dnf install rabbitmq-server -y &>>$LOG_FILE
+dnf install rabbitmq-server &>>$LOG_FILE
 VALIDATE $? "installing rabbitmq"
-systemctl enable rabbitmq-server -y &>>$LOG_FILE
+systemctl enable rabbitmq-server &>>$LOG_FILE
 VALIDATE $? "enabled rabbitmq"
-systemctl start rabbitmq-server -y &>>$LOG_FILE
+systemctl start rabbitmq-server &>>$LOG_FILE
 VALIDATE $? "started rabbitmq"
 
 rabbitmqctl add_user roboshop roboshop123 &>>$LOG_FILE
