@@ -65,9 +65,9 @@ python_setup(){
 golang_setup(){
     dnf install golang -y &>>$LOG_FILE
     VALIDATE $? "INSTALLING golang" 
-    go mod init dispatch
-    go get 
-    go build
+    go mod init dispatch &>>$LOG_FILE
+    go get  &>>$LOG_FILE
+    go build &>>$LOG_FILE
 }
 
 app_setup(){
