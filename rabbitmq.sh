@@ -12,7 +12,7 @@ VALIDATE $? "installing rabbitmq"
 systemctl enable rabbitmq-server -y &>>$LOG_FILE
 VALIDATE $? "enabled rabbitmq"
 systemctl start rabbitmq-server -y &>>$LOG_FILE
-VALIDATE $? "installed rabbitmq"
+VALIDATE $? "started rabbitmq"
 
 rabbitmqctl add_user roboshop roboshop123 &>>$LOG_FILE
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$LOG_FILE
