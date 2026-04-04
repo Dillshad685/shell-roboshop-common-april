@@ -62,6 +62,14 @@ python_setup(){
     VALIDATE $? "installing dependencies"
 }
 
+golang_setup(){
+    dnf install golang -y &>>$LOG_FILE
+    VALIDATE $? "INSTALLING golang" 
+    go mod init dispatch
+    go get 
+    go build
+}
+
 app_setup(){
     id roboshop
     if [ $? -ne 0 ]; then

@@ -8,7 +8,7 @@ cp $SCRIPT_DIR/rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo &>>$LOG_FILE
 VALIDATE $? "Adding RabbitMQ repo"
 
 dnf  install rabbitmq -y &>>$LOG_FILE
-VALIDATE $? "disabled rabbitmq"
+VALIDATE $? "installing rabbitmq"
 systemctl enable rabbitmq -y &>>$LOG_FILE
 VALIDATE $? "enabled rabbitmq"
 systemctl start rabbitmq -y &>>$LOG_FILE
